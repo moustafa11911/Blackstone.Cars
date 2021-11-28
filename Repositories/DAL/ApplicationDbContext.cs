@@ -15,8 +15,7 @@ namespace Repositories.DAL
         }
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            //builder.UseSqlServer(_iConfig["ConnectionStrings:DbConnection"]);
-            builder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Blackstone.Cars;Integrated Security=True");
+            builder.UseSqlServer(_iConfig["ConnectionStrings:DbConnection"]);
             base.OnConfiguring(builder);
         }
 
